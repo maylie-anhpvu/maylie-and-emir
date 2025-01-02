@@ -7,6 +7,91 @@
 <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
+
+<style>
+
+      .divTravel {
+            margin-top: 30px;
+            margin-bottom: 40px;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -253,26 +338,26 @@
 </section>
 
 <section class="rsvp text-center" id="rsvp">
-
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+<!--    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-body">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>-->
+<!--                    </button>-->
+<!--                    <div class="section-padding">-->
+<!--                        <h3>Thank you!</h3>-->
+<!--                        <p>We are glad to see you join us on our big day.</p>-->
+<!--                        <div id="add-to-cal"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--        </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--    </div>&lt;!&ndash; /.modal &ndash;&gt;-->
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-12 text-center">
+
                 <h3>What are you waiting for?</h3>
                 <p>We would greatly appreciate if you could RSVP before April 10th 2025</p>
                 <form id="rsvp-form" class="rsvp-form"
@@ -332,18 +417,158 @@
                 <h3 class="header">Travel Guide - To be updated soon!</h3>
             </div>
         </div>
+        <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 text-center leftcol">
-                <h5>Viet Nam</h5>
-                <div class="text-center">Attractions</div>
-                <div class="text-center">Getting around</div>
-                <div class="text-center">Food & Entertainment</div>
+                <div class="wp4">
+                    <h5>Viet Nam</h5>
+                        <div class="text-center divTravel">Attractions
+                            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#55595c"/>
+                                            <image class="opacity-25" href="img/travel_guide/Saigon-Ho-Chi-Minh-City-2.jpg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://vietnam.travel/things-to-do/7-must-see-attractions-hcmc">7 must see attractions in Ho Chi Minh city</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#55595c"/>
+                                            <image class="opacity-25" href="img/travel_guide/images.jpeg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://vietnam.travel/place-to-go">Cities in Vietnam by area (Northern, Central, Southern)</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
+                                            <image class="opacity-25" href="img/travel_guide/halong.jpeg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://vietnam.travel/places-to-go/northern-vietnam/ha-long">Ha Long bay</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="text-center divTravel">Getting around
+                            <div id="myCarousel2" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#55595c"/>
+                                            <image class="opacity-25" href="img/travel_guide/grab.jpeg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://www.travelvietnam.com/traffic-transportation/grab-in-vietnam-uber-alternative-of-vietnam.html">Grab: Uber alternative of Vietnam & How to set up</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="text-center divTravel">Food & Experiences
+                            <div id="myCarousel3" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#myCarousel3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#myCarousel3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#myCarousel3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#55595c"/>
+                                            <image class="opacity-25" href="img/travel_guide/vnmfood1.jpg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://vietnam.travel/things-to-do/eating-local-hcmc">Eating like locals in Ho Chi Minh city</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="#55595c"/>
+                                            <image class="opacity-25" href="img/travel_guide/vnmfood2.jpg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://vietnam.travel/things-to-do/ho-chi-minh-city-itinerary">Weekend itinerary inspiration</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
+                                            <image class="opacity-25" href="img/travel_guide/vnmfood3.jpg" width="100%" />
+                                        </svg>
+                                        <div class="container">
+                                            <div class="carousel-caption">
+                                                <p><a href="https://vietnam.travel/things-to-do/take-taste-roller-coaster-michelin-guide-hanoi-ho-chi-minh-city-2023-full-selection">2023 Michellin guide for HCM city and Ha Noi</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+
+                        </div>
+                        </div>
+                        <div class="text-center divTravel">Useful resources
+                            <div class="text-start">
+                                <ol><a href="https://vietnam.travel/plan-your-trip">Travel tips</a></ol>
+                                <ol><a href="https://vietnam.travel/things-to-do">Travel plan inspiration</a></ol>
+                                <ol><a href="https://vinpearl.com/en/vietnam-sim-card-for-tourists">Getting a vietnamese SIM card</a></ol>
+                            </div>
+                        </div>
+                </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 text-center rightcol">
-                <h5>Indonesia</h5>
-                <div class="text-center">Attractions</div>
-                <div class="text-center">Getting around</div>
-                <div class="text-center">Food & Entertainment</div>
+                <div class="wp4">
+                    <h5>Indonesia</h5>
+                    <div class="text-center">Attractions
+                    </div>
+                    <div class="text-center">Getting around
+                    </div>
+                    <div class="text-center">Food & Entertainment
+                    </div>
+                </div>
             </div>
+        </div>
     </div>
 </section>
 
@@ -361,6 +586,7 @@
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
+<script src ="js/vendor/bootstrap.bundle.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
